@@ -46,6 +46,13 @@ module JavaBuildpack
       file.open { |f| REXML::Document.new f }
     end
 
+    # The Tomcat +tomcat-users.xml+ file
+    #
+    # @return [Pathname] The Tomcat +server.xml+ file
+    def tomcat_users_xml
+      @droplet.sandbox + 'conf/tomcat-users.xml'
+    end
+
     # The Tomcat +server.xml+ file
     #
     # @return [Pathname] The Tomcat +server.xml+ file

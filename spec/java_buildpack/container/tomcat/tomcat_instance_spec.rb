@@ -46,6 +46,7 @@ describe JavaBuildpack::Container::TomcatInstance do
     expect(sandbox + 'bin/catalina.sh').to exist
     expect(sandbox + 'conf/context.xml').to exist
     expect(sandbox + 'conf/server.xml').to exist
+    expect(sandbox + 'conf/tomcat-users.xml').to exist
   end
 
   it 'should configure for Tomcat 7',
